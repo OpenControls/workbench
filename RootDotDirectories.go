@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/markbates/pkger"
 	"io"
 	"log"
 	"os"
 	"strconv"
-	"text/template"
 )
 
 func CreateDotDirectories(project *RobotProject){
@@ -55,7 +55,7 @@ func CopyLaunch(){
 		os.Exit(2001)
 	}
 
-	source, err := os.Open(fromFile)
+	source, err := pkger.Open(fromFile)
 	if err != nil {
 		log.Println("Could not open "+fileName)
 		log.Println(err)
@@ -98,7 +98,7 @@ func CopySettings(){
 		os.Exit(2001)
 	}
 
-	source, err := os.Open(fromFile)
+	source, err := pkger.Open(fromFile)
 	if err != nil {
 		log.Println("Could not open "+fileName)
 		log.Println(err)
@@ -124,7 +124,7 @@ func CopySettings(){
 
 func CreateWPILibPrefs(project *RobotProject){
 	fileName := "wpilib_preferences.json"
-	inputFile := COMPILE_ROOT + "/templates/dotfiles/wpilib_preferences.tmpl"
+	inputFile := "/templates/dotfiles/wpilib_preferences.tmpl"
 	outputFile := COMPILE_ROOT+"/build/.wpilib/"+fileName
 	type LocalParse struct{
 		Year int
@@ -140,7 +140,7 @@ func CreateWPILibPrefs(project *RobotProject){
 		log.Println("Error while creating "+fileName + " : ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(inputFile)
+	t, e := CompileTemplate(inputFile)
 	if e != nil {
 		log.Println("Could not parse template "+inputFile)
 		log.Println(err)

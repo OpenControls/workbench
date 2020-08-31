@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"os"
-	"text/template"
 )
 
 func ProcessSubsystems(project *RobotProject) {
@@ -20,7 +19,7 @@ func CreateSubsystemDir(project *RobotProject) {
 
 func CreateSubsystem(project *RobotProject, subsystem *Subsystem) {
 	fileName := "main.java"
-	inputFile := COMPILE_ROOT + "/templates/project/subsystem.tmpl.java"
+	inputFile := "/templates/project/subsystem.tmpl.java"
 	outputFile := project.OutputDir + "/subsystems/"+subsystem.Name+".java"
 
 
@@ -77,7 +76,7 @@ func CreateSubsystem(project *RobotProject, subsystem *Subsystem) {
 		log.Println("Error while creating "+fileName+" : ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(inputFile)
+	t, e := CompileTemplate(inputFile)
 	if e != nil {
 		log.Println("Could not parse template " + inputFile)
 		log.Println(err)

@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"os"
-	"text/template"
 )
 func CreateProjectRoot(project *RobotProject){
 	CreateMainJava(project)
@@ -11,7 +10,7 @@ func CreateProjectRoot(project *RobotProject){
 }
 func CreateMainJava(project *RobotProject){
 	fileName := "main.java"
-	inputFile := COMPILE_ROOT + "/templates/project/main.tmpl.java"
+	inputFile := "/templates/project/main.tmpl.java"
 	outputFile := project.OutputDir+"/Main.java"
 	type LocalParse struct{
 		Package string
@@ -25,7 +24,7 @@ func CreateMainJava(project *RobotProject){
 		log.Println("Error while creating "+fileName + " : ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(inputFile)
+	t, e := CompileTemplate(inputFile)
 	if e != nil {
 		log.Println("Could not parse template "+inputFile)
 		log.Println(err)
@@ -42,7 +41,7 @@ func CreateMainJava(project *RobotProject){
 
 func CreateRobotJava(project *RobotProject){
 	fileName := "main.java"
-	inputFile := COMPILE_ROOT + "/templates/project/robot.tmpl.java"
+	inputFile := "/templates/project/robot.tmpl.java"
 	outputFile := project.OutputDir+"/Robot.java"
 	type LocalParse struct{
 		Package string
@@ -56,7 +55,7 @@ func CreateRobotJava(project *RobotProject){
 		log.Println("Error while creating "+fileName + " : ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(inputFile)
+	t, e := CompileTemplate(inputFile)
 	if e != nil {
 		log.Println("Could not parse template "+inputFile)
 		log.Println(err)

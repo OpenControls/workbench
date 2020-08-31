@@ -25,6 +25,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" path="$USER_HOME$/.go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -36,11 +43,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build openfrc.com/openfrc-gearbox" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="openfrc-gearbox" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="openfrc.com/openfrc-gearbox" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build openfrc.com/openfrc-gearbox" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -56,5 +80,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598850467545">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="141" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1598850467545" />
+    <state x="371" y="196" width="613" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598850777269">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="371" y="196" width="613" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1598850777269" />
+    <state width="1318" height="171" key="GridCell.Tab.0.bottom" timestamp="1598850306786">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1318" height="171" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
+    <state width="1318" height="171" key="GridCell.Tab.0.center" timestamp="1598850306786">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1318" height="171" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
+    <state width="1318" height="171" key="GridCell.Tab.0.left" timestamp="1598850306785">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1318" height="171" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1598850306785" />
+    <state width="1318" height="171" key="GridCell.Tab.0.right" timestamp="1598850306786">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1318" height="171" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
+    <state x="0" y="27" width="607" height="741" key="find.popup" timestamp="1598850705524">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="0" y="27" width="607" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1598850705524" />
   </component>
 </project>

@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/markbates/pkger"
 	"io"
 	"log"
 	"os"
 	"strconv"
-	"text/template"
 )
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -38,7 +38,7 @@ func CopyGradleW(){
 		os.Exit(2001)
 	}
 
-	source, err := os.Open(COMPILE_ROOT+"/templates/gradlew")
+	source, err := pkger.Open(COMPILE_ROOT+"/templates/gradlew")
 	if err != nil {
 		log.Println("Could not open gradlew")
 		log.Println(err)
@@ -75,7 +75,7 @@ func CopyGradleWBat(){
 		os.Exit(2001)
 	}
 
-	source, err := os.Open(COMPILE_ROOT+"/templates/gradlew.bat")
+	source, err := pkger.Open(COMPILE_ROOT+"/templates/gradlew.bat")
 	if err != nil {
 		log.Println("Could not open gradlew.bat")
 		log.Println(err)
@@ -115,7 +115,7 @@ func CreateGradleBuild(project *RobotProject){
 		log.Println("Error while creating build.gradle: ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(COMPILE_ROOT + "/templates/build-gradle.tmpl")
+	t, e := CompileTemplate("/templates/build-gradle.tmpl")
 	if e != nil {
 		log.Println("Could not parse template build-gradle.tmpl")
 		log.Println(err)
@@ -142,7 +142,7 @@ func CreateGitignore(project *RobotProject){
 		log.Println("Error while creating .gitignore: ", err)
 		os.Exit(1004)
 	}
-	t, e := template.ParseFiles(COMPILE_ROOT + "/templates/gitignore.tmpl")
+	t, e := CompileTemplate("/templates/gitignore.tmpl")
 	if e != nil {
 		log.Println("Could not parse template gitignore.tmpl")
 		log.Println(err)

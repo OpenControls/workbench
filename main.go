@@ -1,6 +1,9 @@
 package main
 
+import "github.com/markbates/pkger"
+
 func main() {
+	pkger.Include("/templates")
 	metadata := RobotProjectMetadata{
 		Name:    "Test Transcribed Project",
 		Year:    2020,
