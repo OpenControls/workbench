@@ -1,4 +1,4 @@
-module openfrc.com/openfrc-gearbox
+module src.opencontrols.com/workbench
 
 go 1.15
 

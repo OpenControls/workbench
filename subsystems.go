@@ -18,7 +18,7 @@ func CreateSubsystemDir(project *RobotProject) {
 }
 
 func CreateSubsystem(project *RobotProject, subsystem *Subsystem) {
-	fileName := "main.java"
+	fileName := subsystem.Name+".java"
 	inputFile := "/templates/project/subsystem.tmpl.java"
 	outputFile := project.OutputDir + "/subsystems/"+subsystem.Name+".java"
 

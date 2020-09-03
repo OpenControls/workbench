@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40e288cc-2a42-4991-aa1f-749eb29de6e3" name="Default Changelist" comment="" />
+    <list default="true" id="40e288cc-2a42-4991-aa1f-749eb29de6e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfrc-gearbox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subsystems.go" beforeDir="false" afterPath="$PROJECT_DIR$/subsystems.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +41,10 @@
   </component>
   <component name="GOROOT" path="$USER_HOME$/.go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1gqcrJTcamMrSB5TQfe4PUPTyy6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,21 +58,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration name="go build openfrc.com/openfrc-gearbox" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build src.opencontrols.com/workbench" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="openfrc-gearbox" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="openfrc.com/openfrc-gearbox" />
+      <package value="src.opencontrols.com/workbench" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build openfrc.com/openfrc-gearbox" />
+        <item itemvalue="Go Build.go build src.opencontrols.com/workbench" />
       </list>
     </recent_temporary>
   </component>
@@ -80,32 +91,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598850467545">
+    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599166491310">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="141" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1598850467545" />
+    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1599166491310" />
     <state x="371" y="196" width="613" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598850777269">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="371" y="196" width="613" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1598850777269" />
-    <state width="1318" height="171" key="GridCell.Tab.0.bottom" timestamp="1598850306786">
+    <state width="1318" height="171" key="GridCell.Tab.0.bottom" timestamp="1599166470487">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1318" height="171" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
-    <state width="1318" height="171" key="GridCell.Tab.0.center" timestamp="1598850306786">
+    <state width="1318" height="171" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1599166470487" />
+    <state width="1318" height="171" key="GridCell.Tab.0.center" timestamp="1599166470486">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1318" height="171" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
-    <state width="1318" height="171" key="GridCell.Tab.0.left" timestamp="1598850306785">
+    <state width="1318" height="171" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1599166470486" />
+    <state width="1318" height="171" key="GridCell.Tab.0.left" timestamp="1599166470486">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1318" height="171" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1598850306785" />
-    <state width="1318" height="171" key="GridCell.Tab.0.right" timestamp="1598850306786">
+    <state width="1318" height="171" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1599166470486" />
+    <state width="1318" height="171" key="GridCell.Tab.0.right" timestamp="1599166470486">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1318" height="171" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1598850306786" />
+    <state width="1318" height="171" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1599166470486" />
     <state x="0" y="27" width="607" height="741" key="find.popup" timestamp="1598850705524">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
