@@ -26,36 +26,27 @@ func CreateGradleFiles(project *RobotProject){
 }
 
 func CopyGradleW(){
-	sourceFileStat, err := os.Stat(COMPILE_ROOT+"/templates/gradlew")
+	type ps = struct {
+		project string
+	}
+	parseSpec := ps{
+		"FRC",
+	}
+
+	f, err := os.Create(COMPILE_ROOT+"/build/gradlew")
 	if err != nil {
-		log.Println("Could not open gradlew")
+		log.Println("Error while creating gradlew: ", err)
+		os.Exit(1004)
+	}
+	t, e := CompileTemplate("/templates/gradlew.tmpl")
+	if e != nil {
+		log.Println("Could not parse template gradlew.tmpl")
 		log.Println(err)
 		os.Exit(2001)
 	}
+	err = t.Execute(f, parseSpec)
 
-	if !sourceFileStat.Mode().IsRegular() {
-		log.Println("gradlew is not a regular file")
-		os.Exit(2001)
-	}
-
-	source, err := pkger.Open(COMPILE_ROOT+"/templates/gradlew")
 	if err != nil {
-		log.Println("Could not open gradlew")
-		log.Println(err)
-		os.Exit(2001)
-	}
-	defer source.Close()
-
-	destination, err := os.Create(COMPILE_ROOT+"/build/gradlew")
-	if err != nil {
-		log.Println("Could not open the destination")
-		log.Println(err)
-		os.Exit(2001)
-	}
-	defer destination.Close()
-	nBytes, err := io.Copy(destination, source)
-	log.Println("Copied " + strconv.FormatInt(nBytes, 10) + " bytes")
-	if err != nil{
 		log.Println("Could not save gradlew to filesystem: ", err)
 		os.Exit(1005)
 	}
@@ -71,13 +62,13 @@ func CopyGradleWBat(){
 	}
 
 	if !sourceFileStat.Mode().IsRegular() {
-		log.Println("gradlew.bat is not a regular file")
+		log.Println("gradlew.tmpl.bat is not a regular file")
 		os.Exit(2001)
 	}
 
 	source, err := pkger.Open(COMPILE_ROOT+"/templates/gradlew.bat")
 	if err != nil {
-		log.Println("Could not open gradlew.bat")
+		log.Println("Could not open gradlew.tmpl.bat")
 		log.Println(err)
 		os.Exit(2001)
 	}
@@ -93,10 +84,10 @@ func CopyGradleWBat(){
 	nBytes, err := io.Copy(destination, source)
 	log.Println("Copied " + strconv.FormatInt(nBytes, 10) + " bytes")
 	if err != nil{
-		log.Println("Could not save gradlew.bat to filesystem: ", err)
+		log.Println("Could not save gradlew.tmpl.bat to filesystem: ", err)
 		os.Exit(1005)
 	}
-	log.Println("Created gradlew.bat")
+	log.Println("Created gradlew.tmpl.bat")
 }
 
 func CreateGradleBuild(project *RobotProject){

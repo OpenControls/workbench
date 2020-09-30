@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	pkger.Include("/templates")
+
 	var config RobotProject
 	if _, err := toml.DecodeFile("robot.ocwb.toml", &config); err != nil {
 		fmt.Println(err)
@@ -22,7 +24,6 @@ func main() {
 		return
 	}
 	fmt.Println(string(json))
-	pkger.Include("/templates")
 	metadata := RobotProjectMetadata{
 		Name:    "Test Transcribed Project",
 		Year:    2020,
