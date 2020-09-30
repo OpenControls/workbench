@@ -17,8 +17,8 @@ type RobotProject struct{
 /////////// Robot
 type Robot struct{
 	Path string
-	Subsystems Subsystems `toml:"subsystem"`
-	Sensors []*Sensor `toml:"sensors"`
+	Subsystems Subsystems `toml:"subsystems"`
+	Sensors []*Sensor `toml:"sensor"`
 	GlobalManager *GlobalManager `toml:"gloal_manager"`
 
 }
@@ -36,7 +36,7 @@ type GlobalManagerTrigger struct{
 
 type Subsystems struct{
 	Package string `toml:"package"`
-	SubsystemList []*Subsystem `toml:"subsystem_list"`
+	SubsystemList []*Subsystem `toml:"subsystem"`
 }
 
 const(
@@ -52,7 +52,7 @@ type Subsystem struct{
 	Description string `toml:"description"`
 	SubsystemType int `toml:"subsystem_type"`
 	Motors []*BaseMotorController `toml:"motor"`
-	Sensors []*Sensor `toml:"sensors"`
+	Sensors []*Sensor `toml:"sensor"`
 
 
 	OnStateUpdateCode string `toml:"on_state_update_code"`

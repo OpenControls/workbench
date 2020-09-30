@@ -9,10 +9,10 @@ output_directory = ""
 
 [robot]
   Path = ""
-  [robot.subsystem]
+  [robot.subsystems]
     package = "frc.robot.subsystems"
 
-    [[robot.subsystem.subsystem_list]]
+    [[robot.subsystems.subsystem]]
       Path = ""
       name = "Drivetrain"
       summary = ""
@@ -20,7 +20,7 @@ output_directory = ""
       subsystem_type = 0
       on_state_update_code = "System.out.println(\"Hello\");\nSystem.out.println(\"1\");"
 
-      [[robot.subsystem.subsystem_list.motor]]
+      [[robot.subsystems.subsystem.motor]]
         path = ""
         name = "TestMotorController"
         motor_controller_type = 0
@@ -34,26 +34,82 @@ output_directory = ""
         neutral = 2
         enable_feedback = false
         feedback_port = 0
-        EnableSensorPhase = false
-        SensorPhase = 0
-        SensorPhaseEnum = ""
-        TimeoutEnabled = 0
-        Timeout = 0
-        EnableCurrentLimit = false
-        EnableOpenLoopRamp = false
-        EnableNominalOutput = false
-        NominalOutputForward = 0.0
-        NominalOutputReverse = 0.0
-        EnablePeakOutput = false
-        PeakOutputForward = 0.0
-        PeakOutputReverse = 0.0
-        EnablePID = false
-        [robot.subsystem.subsystem_list.motor.OpenLoopRamp]
-          FileSpec = ""
-          FilterType = ""
-          Format = ""
-        [robot.subsystem.subsystem_list.motor.PID]
+        enable_sensor_phase = false
+        sensor_phase = 0
+        timeout_enabled = 0
+        timeout = 0
+        enable_current_limit = false
+        enable_open_loop_ramp = false
+        open_loop_ramp = 0.0
+        enable_nominal_output = false
+        nominal_output_forward = 0.0
+        nominal_output_reverse = 0.0
+        enable_peak_output = false
+        peak_output_forward = 0.0
+        peak_output_reverse = 0.0
+        enable_pid = false
+        [robot.subsystems.subsystem.motor.pid]
           kP = 0.0
           kI = 0.0
           kD = 0.0
           kF = 0.0
+
+      [[robot.subsystems.subsystem.sensor]]
+        path = ""
+        name = "Test Sensor"
+        sensor_type = 0
+        port = 0
+
+    [[robot.subsystems.subsystem]]
+      Path = ""
+      name = "Lift"
+      summary = ""
+      description = ""
+      subsystem_type = 1
+      on_state_update_code = "System.out.println(\"Hello\");\nSystem.out.println(\"1\");"
+
+      [[robot.subsystems.subsystem.motor]]
+        path = ""
+        name = "TestMotorController"
+        motor_controller_type = 0
+        motor_controller_class_name = ""
+        can_id = 1
+        enable_follow = false
+        follows = ""
+        enable_invert = true
+        invert = 3
+        enable_neutral = true
+        neutral = 2
+        enable_feedback = false
+        feedback_port = 0
+        enable_sensor_phase = false
+        sensor_phase = 0
+        timeout_enabled = 0
+        timeout = 0
+        enable_current_limit = false
+        enable_open_loop_ramp = false
+        open_loop_ramp = 0.0
+        enable_nominal_output = false
+        nominal_output_forward = 0.0
+        nominal_output_reverse = 0.0
+        enable_peak_output = false
+        peak_output_forward = 0.0
+        peak_output_reverse = 0.0
+        enable_pid = false
+        [robot.subsystems.subsystem.motor.pid]
+          kP = 0.0
+          kI = 0.0
+          kD = 0.0
+          kF = 0.0
+
+      [[robot.subsystems.subsystem.sensor]]
+        path = ""
+        name = "Test Sensor"
+        sensor_type = 0
+        port = 0
+
+  [[robot.sensor]]
+    path = ""
+    name = "Test Global Sensor"
+    sensor_type = 1
+    port = 1
