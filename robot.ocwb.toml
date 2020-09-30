@@ -1,0 +1,59 @@
+output_directory = ""
+
+[metadata]
+  name = "Test Transcribed Project"
+  year = 2020
+  team = 100
+  package = "frc.robot"
+  gradle_rio_version = "2020.3.2"
+
+[robot]
+  Path = ""
+  [robot.subsystem]
+    package = "frc.robot.subsystems"
+
+    [[robot.subsystem.subsystem_list]]
+      Path = ""
+      name = "Drivetrain"
+      summary = ""
+      description = ""
+      subsystem_type = 0
+      on_state_update_code = "System.out.println(\"Hello\");\nSystem.out.println(\"1\");"
+
+      [[robot.subsystem.subsystem_list.motor]]
+        path = ""
+        name = "TestMotorController"
+        motor_controller_type = 0
+        motor_controller_class_name = ""
+        can_id = 0
+        enable_follow = false
+        follows = ""
+        enable_invert = true
+        invert = 3
+        enable_neutral = true
+        neutral = 2
+        enable_feedback = false
+        feedback_port = 0
+        EnableSensorPhase = false
+        SensorPhase = 0
+        SensorPhaseEnum = ""
+        TimeoutEnabled = 0
+        Timeout = 0
+        EnableCurrentLimit = false
+        EnableOpenLoopRamp = false
+        EnableNominalOutput = false
+        NominalOutputForward = 0.0
+        NominalOutputReverse = 0.0
+        EnablePeakOutput = false
+        PeakOutputForward = 0.0
+        PeakOutputReverse = 0.0
+        EnablePID = false
+        [robot.subsystem.subsystem_list.motor.OpenLoopRamp]
+          FileSpec = ""
+          FilterType = ""
+          Format = ""
+        [robot.subsystem.subsystem_list.motor.PID]
+          kP = 0.0
+          kI = 0.0
+          kD = 0.0
+          kF = 0.0
